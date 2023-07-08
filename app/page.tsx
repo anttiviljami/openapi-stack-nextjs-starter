@@ -15,17 +15,12 @@ export default function App() {
       .then((client) => client.getPets().then((res) => res.data))
   );
 
-  if (petsQuery.isLoading) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
       <h1>OpenAPI Stack Demo</h1>
       <div>
-        {petsQuery.data?.map((pet) => (
-          <PetItem item={pet} />
-        ))}
+        {petsQuery.data?.map((pet) => <PetItem key={pet.id} item={pet} />) ??
+          'Loading...'}
       </div>
     </div>
   );

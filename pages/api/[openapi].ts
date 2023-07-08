@@ -1,17 +1,19 @@
 import { OpenAPIBackend } from 'openapi-backend';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-const api = new OpenAPIBackend({ definition: 'public/openapi.yml' });
+const api = new OpenAPIBackend({
+  definition: 'public/openapi.yml',
+});
 
 api.register({
-  getPets: (_c, _req: NextApiRequest, res: NextApiResponse) =>
+  getPets: (_c, _req, res: NextApiResponse) =>
     res.status(200).json([
       { id: 1, type: 'cat', name: 'Garfield' },
       { id: 2, type: 'dog', name: 'Odie' },
     ]),
-  notFound: (_c, _req: NextApiRequest, res: NextApiResponse) =>
+  notFound: (_c, _req, res: NextApiResponse) =>
     res.status(404).json({ err: 'not found' }),
-  validationFail: (c, _req: NextApiRequest, res: NextApiResponse) =>
+  validationFail: (c, _req, res: NextApiResponse) =>
     res.status(400).json({ err: c.validation.errors }),
 });
 
