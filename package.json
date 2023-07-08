@@ -1,0 +1,31 @@
+{
+  "name": "stackblitz-starters-openapi-stack-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "types": "typegen public/openapi.yml > app/types/openapi.d.ts"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.29.19",
+    "@types/node": "20.4.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "eslint": "8.44.0",
+    "eslint-config-next": "13.4.9",
+    "js-yaml": "^4.1.0",
+    "next": "13.4.9",
+    "openapi-backend": "^5.9.2",
+    "openapi-client-axios": "^7.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "openapi-client-axios-typegen": "^7.2.2",
+    "openapicmd": "^1.16.2"
+  }
+}
