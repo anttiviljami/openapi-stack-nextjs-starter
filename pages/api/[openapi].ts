@@ -1,4 +1,4 @@
-import { OpenAPIBackend } from 'openapi-backend';
+import OpenAPIBackend from 'openapi-backend';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const api = new OpenAPIBackend({

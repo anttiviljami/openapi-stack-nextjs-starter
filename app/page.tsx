@@ -1,6 +1,6 @@
 'use client';
 
-import { OpenAPIClientAxios } from 'openapi-client-axios';
+import OpenAPIClientAxios from 'openapi-client-axios';
 import { useQuery } from '@tanstack/react-query';
 import type { Client, Components } from './types/openapi';
 
