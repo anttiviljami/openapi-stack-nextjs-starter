@@ -2,7 +2,7 @@
 
 import OpenAPIClientAxios from 'openapi-client-axios';
 import { useQuery } from '@tanstack/react-query';
-import type { Client, Components } from './types/openapi';
+import { Client, Components } from './types/openapi';
 
 const api = new OpenAPIClientAxios({
   definition: './openapi.yml',

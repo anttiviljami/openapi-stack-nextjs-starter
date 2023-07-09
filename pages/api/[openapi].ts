@@ -1,6 +1,6 @@
 import OpenAPIBackend from 'openapi-backend';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { Paths } from '../../app/types/openapi';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { Paths } from '../../app/types/openapi';
 
 const api = new OpenAPIBackend({
   definition: 'public/openapi.yml',
