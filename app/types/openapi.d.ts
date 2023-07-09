@@ -4,24 +4,24 @@ import type {
   UnknownParamsObject,
   OperationResponse,
   AxiosRequestConfig,
-} from 'openapi-client-axios'; 
+} from 'openapi-client-axios';
 
 declare namespace Components {
-    namespace Schemas {
-        export interface Pet {
-            id: string;
-            type: "cat" | "dog" | "asd";
-            name?: string;
-        }
+  namespace Schemas {
+    export interface Pet {
+      id: string;
+      type: 'cat' | 'dog';
+      name?: string;
     }
+  }
 }
 declare namespace Paths {
-    namespace GetPets {
-        namespace Responses {
-            export type $200 = Components.Schemas.Pet[];
-        }
+  namespace GetPets {
+    namespace Responses {
+      export type $200 = Components.Schemas.Pet[];
     }
-}
+  }
+}``
 
 export interface OperationMethods {
   /**
@@ -30,8 +30,8 @@ export interface OperationMethods {
   'getPets'(
     parameters?: Parameters<UnknownParamsObject> | null,
     data?: any,
-    config?: AxiosRequestConfig  
-  ): OperationResponse<Paths.GetPets.Responses.$200>
+    config?: AxiosRequestConfig
+  ): OperationResponse<Paths.GetPets.Responses.$200>;
 }
 
 export interface PathsDictionary {
@@ -42,9 +42,9 @@ export interface PathsDictionary {
     'get'(
       parameters?: Parameters<UnknownParamsObject> | null,
       data?: any,
-      config?: AxiosRequestConfig  
-    ): OperationResponse<Paths.GetPets.Responses.$200>
-  }
+      config?: AxiosRequestConfig
+    ): OperationResponse<Paths.GetPets.Responses.$200>;
+  };
 }
 
-export type Client = OpenAPIClient<OperationMethods, PathsDictionary>
+export type Client = OpenAPIClient<OperationMethods, PathsDictionary>;
