@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "types": "typegen public/openapi.yml > app/types/openapi.d.ts",
-    "watch-types": "nodemon --watch public/openapi.yml --exec \"npm run types\""
+    "watch-types": "nodemon --delay 0.5 --watch public/openapi.yml --exec \"npm run types\""
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.19",
