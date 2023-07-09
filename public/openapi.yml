@@ -1,13 +1,13 @@
 openapi: 3.0.2
 info:
-  title: 'Pet API'
+  title: "Pet API"
   version: 1.0.0
 paths:
-  '/api/pets':
+  "/api/pets":
     get:
       operationId: getPets
       responses:
-        '200':
+        "200":
           description: list of pets
           content:
             application/json:
@@ -24,7 +24,7 @@ components:
           type: string
         type:
           type: string
-          enum: ['cat', 'dog']
+          enum: ["cat", "dog", "asd"]
         name:
           type: string
       required:
