@@ -7,11 +7,11 @@ const api = new OpenAPIBackend({
 });
 
 api.register({
-  getPets: (_c, _req, res: NextApiResponse) =>
+  getPets: (_c, _req, res: NextApiResponse<Paths.GetPets.Responses.$200>) =>
     res.status(200).json([
       { id: '1', type: 'cat', name: 'Garfield' },
       { id: '2', type: 'dog', name: 'Odie' },
-    ] as Paths.GetPets.Responses.$200),
+    ]),
   notFound: (_c, _req, res: NextApiResponse) =>
     res.status(404).json({ err: 'not found' }),
   validationFail: (c, _req, res: NextApiResponse) =>
