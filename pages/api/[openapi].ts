@@ -1,5 +1,6 @@
 import OpenAPIBackend from 'openapi-backend';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import type { Paths } from '../../app/types/openapi';
 
 const api = new OpenAPIBackend({
   definition: 'public/openapi.yml',
@@ -8,9 +9,9 @@ const api = new OpenAPIBackend({
 api.register({
   getPets: (_c, _req, res: NextApiResponse) =>
     res.status(200).json([
-      { id: 1, type: 'cat', name: 'Garfield' },
-      { id: 2, type: 'dog', name: 'Odie' },
-    ]),
+      { id: '1', type: 'cat', name: 'Garfield' },
+      { id: '2', type: 'dog', name: 'Odie' },
+    ] as Paths.GetPets.Responses.$200),
   notFound: (_c, _req, res: NextApiResponse) =>
     res.status(404).json({ err: 'not found' }),
   validationFail: (c, _req, res: NextApiResponse) =>
