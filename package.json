@@ -28,6 +28,7 @@
   "devDependencies": {
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.1",
-    "openapicmd": "^1.17.2"
+    "openapicmd": "^1.17.2",
+    "openapi-client-axios-typegen": "^7.3.8"
   }
 }
