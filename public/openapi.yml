@@ -27,6 +27,4 @@ components:
           enum: ["cat", "dog"]
         name:
           type: string
-      required:
-        - id
-        - type
+      required: ["id", "type"]

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "types": "openapi typegen > app/types/openapi.d.ts",
-    "watch-types": "nodemon --watch public/openapi.yml --exec \"npm run types\""
+    "watch-types": "nodemon --watch public/openapi.yml --exec \"npm run types\"",
+    "test": "openapi test --server http://localhost:3000"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.19",
@@ -28,7 +29,7 @@
   "devDependencies": {
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.1",
-    "openapicmd": "^1.17.2",
+    "openapicmd": "^2.0.0-rc16",
     "openapi-client-axios-typegen": "^7.3.8"
   }
 }

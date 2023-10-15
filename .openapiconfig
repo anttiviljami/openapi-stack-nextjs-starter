@@ -1,1 +1,11 @@
 definition: public/openapi.yml
+tests:
+  getPets:
+    call operation:
+      checks:
+        - Success2XX
+        - ValidResponseBody
+      request:
+        params: {}
+        config:
+          headers: {}
