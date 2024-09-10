@@ -1,13 +1,13 @@
 import OpenAPIBackend from 'openapi-backend';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Paths } from '../../app/types/openapi';
+import { OperationResponse } from '../../app/types/openapi';
 
 const api = new OpenAPIBackend({
   definition: 'public/openapi.yml',
 });
 
 api.register({
-  getPets: (_c, _req, res: NextApiResponse<Paths.GetPets.Responses.$200>) =>
+  getPets: (_c, _req, res: NextApiResponse<OperationResponse<'getPets'>>) =>
     res.status(200).json([
       { id: '1', type: 'cat', name: 'Garfield' },
       { id: '2', type: 'dog', name: 'Odie' },

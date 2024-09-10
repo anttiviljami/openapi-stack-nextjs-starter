@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "types": "openapi typegen > app/types/openapi.d.ts",
+    "types": "openapi typegen --client --backend > app/types/openapi.d.ts",
     "watch-types": "nodemon --watch public/openapi.yml --exec \"npm run types\"",
     "test": "openapi test --server http://localhost:3000"
   },
@@ -29,7 +29,7 @@
   "devDependencies": {
     "concurrently": "^8.2.0",
     "nodemon": "^3.0.1",
-    "openapicmd": "^2.0.0-rc17",
+    "openapicmd": "^2.6.0",
     "openapi-client-axios-typegen": "^7.3.8"
   }
 }

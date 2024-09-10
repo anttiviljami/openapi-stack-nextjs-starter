@@ -2,7 +2,7 @@
 
 import OpenAPIClientAxios from 'openapi-client-axios';
 import { useQuery } from '@tanstack/react-query';
-import { Client, Components } from './types/openapi';
+import { Client, Pet } from './types/openapi';
 
 const api = new OpenAPIClientAxios({
   definition: './openapi.yml',
@@ -26,7 +26,7 @@ export default function App() {
   );
 }
 
-const PetItem = (props: { item: Components.Schemas.Pet }) => {
+const PetItem = (props: { item: Pet }) => {
   return (
     <div>
       {props.item.type} {props.item.name}
